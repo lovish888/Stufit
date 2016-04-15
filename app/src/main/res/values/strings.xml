@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Stufit</string>
+    <string name="title_activity_second">Second</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <string-array name="Email_to">
+        <item>President</item>
+        <item>GSec Sports</item>
+        <item>GSec Cultural</item>
+        <item>GSec Science and Tech</item>
+        <item>Lost and Found</item>
+        <item>Hostel Affairs</item>
+    </string-array>
 </resources>
