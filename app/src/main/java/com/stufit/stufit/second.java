@@ -28,6 +28,8 @@ public class second extends AppCompatActivity implements NavigationView.OnNaviga
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         createDrawerLayout(toolbar);
         LocalActivityManager mLocalActivityManager = manageNavigation(savedInstanceState);
         manageTabhost(mLocalActivityManager);

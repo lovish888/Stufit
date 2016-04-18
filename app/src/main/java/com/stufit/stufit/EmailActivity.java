@@ -41,6 +41,6 @@ public class EmailActivity extends AppCompatActivity {
 
     public String getStrings(int i){
         String[] emailLinks = {"lovish79214@gmail.com"};
-        return emailLinks[i];
+        return emailLinks[0];
     }
 }
