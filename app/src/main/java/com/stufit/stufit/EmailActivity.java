@@ -34,13 +34,20 @@ public class EmailActivity extends AppCompatActivity {
                 Intent email = new Intent(Intent.ACTION_SEND);
                 email.setData(Uri.parse("mailto:"));
                 String to = getStrings(i);
+                int text = getEmailText(i);
                 email.putExtra(Intent.EXTRA_EMAIL, to);
+                email.putExtra(Intent.EXTRA_TEXT,text);
             }
         });
     }
 
     public String getStrings(int i){
-        String[] emailLinks = {"lovish79214@gmail.com"};
-        return emailLinks[0];
+        String[] emailLinks = {"sdangi724@gmail.com","shubhamv1204@gmail.com","niraj.lnmiit@gmail.com","vipul.viki@gmail.com","lostandfound.lnmiit@gmail.com" +
+                "lostandfound.lnmiit@gmail.com","sdgupta.gupta9@gmail.com","hostel@lnmiit.ac.in"};
+        return emailLinks[i];
+    }
+    public int getEmailText(int i){
+        int[] emailText = {R.string.president_email,R.string.gsec_sports,R.string.gsec_cultural,R.string.gsec_scienceandtech,R.string.lostandfound,R.string.rfid_lost,R.string.vice_president,R.string.hostelaffairs};
+        return emailText[i];
     }
 }
