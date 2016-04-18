@@ -26,12 +26,18 @@ public class second extends AppCompatActivity implements NavigationView.OnNaviga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        //Custom toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        //Creating drawer layout on toolbar
         createDrawerLayout(toolbar);
+
+        //Managing navigation
         LocalActivityManager mLocalActivityManager = manageNavigation(savedInstanceState);
+
+        //Creating and managing Tabhost
         manageTabhost(mLocalActivityManager);
     }
 
@@ -43,12 +49,12 @@ public class second extends AppCompatActivity implements NavigationView.OnNaviga
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Second Tab");
         TabHost.TabSpec tab3 = tabHost.newTabSpec("Third Tab");
 
-        tab3.setIndicator("Class tt");//Name of the Tab.
-        tab3.setContent(new Intent(this, Classtt.class));
+        tab1.setIndicator("Class tt");//Name of the Tab.
+        tab1.setContent(new Intent(this, Classtt.class));
         tab2.setIndicator("Email");//Name of the Tab.
         tab2.setContent(new Intent(this, EmailActivity.class));
-        tab1.setIndicator("Daily Summary");
-        tab1.setContent(new Intent(this, Summary.class));
+        tab3.setIndicator("Summary");
+        tab3.setContent(new Intent(this, Summary.class));
 
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
