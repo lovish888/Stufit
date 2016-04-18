@@ -5,13 +5,26 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    
+    //email
+    <string name="president_email">Dear sir, please forward this mail to all student groups</string>
+    <string name="gsec_sports">Dear sir,please forward this mail to all student groups</string>
+    <string name="gsec_cultural">Dear sir,please forward this mail to all student groups</string>
+    <string name="gsec_scienceandtech">Dear sir,please forward this mail to all student groups</string>
+    <string name="lostandfound">Please forward it to all the groups.
+                                I have lost/found </string>
+    <string name="rfid_lost">Please forward it to all the groups
+                            I have lost my  RFID card somewhere in the campus. If any one finds it please contact me.
+                            </string>
+    <string name="vice_president">Dear sir,please forward this mail to all student groups</string>
+    <string name="hostelaffairs">This mail is for..</string>
     <string-array name="Email_to">
         <item>President</item>
-        <item>GSec Sports</item>
-        <item>GSec Cultural</item>
-        <item>GSec Science and Tech</item>
+        <item>Gsec-Sports</item>
+        <item>Gsec-Cultural</item>
+        <item>Gsec-Science and Tech</item>
         <item>Lost and Found</item>
+        <item>Rfid lost</item>
+        <item>Vice president</item>
         <item>Hostel Affairs</item>
     </string-array>
 </resources>
