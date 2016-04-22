@@ -28,4 +28,13 @@
         <item>Vice president</item>
         <item>Hostel Affairs</item>
     </string-array>
+    <string-array name="subjects_summary">
+        <item>COA</item>
+        <item>OOPS</item>
+        <item>POC</item>
+        <item>SSC</item>
+        <item>IPSY</item>
+        <item>DMBS</item>
+        <item>DAA</item>
+    </string-array>
 </resources>
