@@ -143,14 +143,14 @@ public class second extends AppCompatActivity implements NavigationView.OnNaviga
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "I am using this awesome android app.";
-            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody +"\nDownload: https://play.google.com/store/apps/details?id=xyz.wheretopark.tabtest&hl=en");
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
 
         } else if (id == R.id.contact_us) {
             Intent contact = new Intent(Intent.ACTION_SEND);
             contact.setData(Uri.parse("mailto:"));
-            String[] to = {"hello@wheretopark.xyz"};
+            String[] to = {"lovish79214@gmail.com"};
             contact.putExtra(Intent.EXTRA_EMAIL, to);
 
             // Name of specification for email.

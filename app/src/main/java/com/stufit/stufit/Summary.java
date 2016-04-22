@@ -9,40 +9,38 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Summary extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    TextView summary = (TextView)findViewById(R.id.summary);
+    TextView summary;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
+
+        summary = (TextView) findViewById(R.id.summary);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.subjects_summary, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner.setAdapter(adapter);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(position==0){
+        if (position == 0) {
             summary.setText("COA");
-        }
-        else if (position==1){
+        } else if (position == 1) {
             summary.setText("OOPS");
-        }
-        else if (position==2){
+        } else if (position == 2) {
             summary.setText("POC");
-        }
-        else if (position==3){
+        } else if (position == 3) {
             summary.setText("SSC");
-        }
-        else if (position==4){
+        } else if (position == 4) {
             summary.setText("IPSY");
-        }
-        else if (position==5){
+        } else if (position == 5) {
             summary.setText("DBMS");
-        }
-        else {
+        } else {
             summary.setText("DAA");
         }
 
