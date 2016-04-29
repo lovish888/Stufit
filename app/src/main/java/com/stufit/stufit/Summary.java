@@ -1,5 +1,6 @@
 package com.stufit.stufit;
 
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 public class Summary extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     TextView summary;
+    mongodatabase mdb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,8 @@ public class Summary extends AppCompatActivity implements AdapterView.OnItemSele
 
         summary = (TextView) findViewById(R.id.summary);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+         mdb = new mongodatabase();
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.subjects_summary, android.R.layout.simple_spinner_item);

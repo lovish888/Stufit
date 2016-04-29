@@ -3,6 +3,7 @@ package com.stufit.stufit;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +11,32 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Classtt extends AppCompatActivity {
 
     ListView timeTableList;
+    Calendar calendar = Calendar.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classtt);
 
-        //create(time_list, subjects_list);
+        String[] time_list = getResources().getStringArray(R.array.time_list);
+        //mongodb_timetable timetable = new mongodb_timetable();
+
+        SimpleDateFormat getDay = new SimpleDateFormat("EE");
+        String day = String.format(getDay.format(calendar.getTime()));
+        String[] subjects_list = getResources().getStringArray(R.array.subject_list);
+        //String[] subjects_list = timetable.getTimeTable("Fri");
+        //Log.d("EmailFilter", subjects_list[0]);
+
+        TextView dayName = (TextView) findViewById(R.id.day_name);
+        dayName.setText(day);
+
+        create(time_list, subjects_list);
     }
 
     void create(String[] time_list ,String[] subjects_list) {

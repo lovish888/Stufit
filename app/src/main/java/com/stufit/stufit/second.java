@@ -17,6 +17,10 @@ import android.view.MenuItem;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
+
 public class second extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TabHost tabHost;
