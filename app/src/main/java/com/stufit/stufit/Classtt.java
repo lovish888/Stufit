@@ -25,12 +25,12 @@ public class Classtt extends AppCompatActivity {
         setContentView(R.layout.activity_classtt);
 
         String[] time_list = getResources().getStringArray(R.array.time_list);
-        //mongodb_timetable timetable = new mongodb_timetable();
+        mongodb_timetable timetable = new mongodb_timetable();
 
         SimpleDateFormat getDay = new SimpleDateFormat("EE");
         String day = String.format(getDay.format(calendar.getTime()));
-        String[] subjects_list = getResources().getStringArray(R.array.subject_list);
-        //String[] subjects_list = timetable.getTimeTable("Fri");
+       // String[] subjects_list = getResources().getStringArray(R.array.subject_list);
+        String[] subjects_list = timetable.getTimeTable("Fri");
         //Log.d("EmailFilter", subjects_list[0]);
 
         TextView dayName = (TextView) findViewById(R.id.day_name);
